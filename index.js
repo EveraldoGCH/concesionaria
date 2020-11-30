@@ -36,5 +36,15 @@ puedeComprar: function(auto, persona){
       return 
    }
    else return false
+},
+autosQuePuedeComprar: function(persona){
+   let autosQuePuede = autos.filter(auto=> this.puedeComprar(auto, persona))
+   return autosQuePuede
+},
+persona:{
+   nombre:'Juan',
+   capacidadDePagoEnCuotas: 20000,
+   capacidadDePagoTotal: 100000
+   }
 }
-}
+console.log(concesionaria.autosQuePuedeComprar(concesionaria.persona))
